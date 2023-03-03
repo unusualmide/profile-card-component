@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  width: 100%;
+  background-color: hsl(185, 75%, 39%);
+  background-image: url(./images/bg-pattern-top.png),
+    url(./images/bg-pattern-bottom.png);
+  background-repeat: no-repeat, repeat-y;
+  background-position: center left, center right;
+  background-size: 48%, 100vh;
+}
+
+.content-box {
+  border: none;
+  background-color: white;
+  border-radius: 15px;
+  width: 330px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-container {
+  border: 5px solid white;
+  border-radius: 50%;
+  width: fit-content;
+  margin: auto;
+  margin-top: -3rem;
+  z-index: 2;
+}
+
+img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+div img {
+  border-radius: 50%;
+}
+
+h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 18px;
+}
+
+.text-reform {
+  color: hsl(0, 0%, 59%);
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.resize {
+  color: hsl(0, 0%, 59%);
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 17px;
+}
+
+.bottom-flex {
+  border-top: 1px solid hsl(0, 0%, 89%);
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+}
+
+.text {
+  font-size: 17px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  line-height: 1.5;
+}
+
+p span {
+  font-size: 11px;
+  font-weight: 400;
+  color: hsl(0, 0%, 59%);
+}
+
+.image-container:hover{
+    transition: all 0.5s;
+    filter: brightness(100%);
+    transform: scaleY(97%);
+
+}
+
+@media screen and (max-width: 600px){
+     body{
+        background-size: 80%, 50%;
+        background-position: center left, center bottom;
+        background-repeat: no-repeat;
+     }
+
+    .content-box{
+        width: 350px;
+        height: 380px;
+    }
+
+    .text{
+        font-size: 19px;
+    }
+}
